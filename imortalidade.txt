@@ -1,0 +1,105 @@
+-- Crie um ScreenGui (interface de tela) para conter o botão e a TextBox
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+-- Crie uma TextBox dentro do ScreenGui
+local textBox = Instance.new("TextBox")
+textBox.Size = UDim2.new(0, 200, 0, 30) -- Define o tamanho da TextBox
+textBox.Position = UDim2.new(0.5, -100, 0.4, -15) -- Define a posição da TextBox
+textBox.PlaceholderText = "Insira algo aqui" -- Texto de orientação para o usuário
+textBox.Parent = screenGui
+
+-- Crie um botão preto dentro do ScreenGui
+local botao = Instance.new("TextButton")
+botao.Size = UDim2.new(0, 100, 0, 50) -- Define o tamanho do botão
+botao.Position = UDim2.new(0.5, -50, 0.5, 50) -- Define a posição do botão abaixo da TextBox
+botao.BackgroundColor3 = Color3.new(0, 0, 0) -- Cor de fundo preta
+botao.Text = "Ativar Loop" -- Texto inicial do botão
+botao.TextColor3 = Color3.new(1, 1, 1) -- Cor do texto branca
+botao.Parent = screenGui
+
+-- Variável para controlar o estado do loop
+local loopAtivo = false
+
+-- Função que será chamada quando o botão for clicado
+local function onBotaoClicado()
+    loopAtivo = not loopAtivo -- Inverte o estado do loop
+
+    if loopAtivo then
+        local textoDaTextBox = textBox.Text -- Obtém o texto inserido na TextBox
+        botao.Text = "Desativar Loop (" .. textoDaTextBox .. ")" -- Atualiza o texto do botão
+        while loopAtivo do
+            local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = 9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = 9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = 9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = 9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = 9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = 9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = 9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = 9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = 9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = -9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+
+local args = {
+                [1] = workspace:FindFirstChild(textoDaTextBox), -- Usa o texto da TextBox
+                [2] = -9.e+1000
+            }
+            game:GetService("ReplicatedStorage").Main.Attacks.Donut:FireServer(unpack(args))
+            wait()
+        end
+    else
+        botao.Text = "Ativar Loop" -- Atualiza o texto do botão
+    end
+end
+
+-- Conecta a função onBotaoClicado ao evento de clique do botão
+botao.MouseButton1Click:Connect(onBotaoClicado)
